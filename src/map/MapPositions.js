@@ -41,7 +41,7 @@ const MapPositions = ({ positions, onClick, showStatus, selectedPosition, titleF
     return {
       id: position.id,
       deviceId: position.deviceId,
-      name: device.name,
+      name: `${device.contact}\n${device.name || ''}`.trim(),
       fixTime: formatTime(position.fixTime, 'seconds'),
       category: mapIconKey(device.category),
       color: showStatus ? position.attributes.color || getStatusColor(device.status) : 'neutral',
