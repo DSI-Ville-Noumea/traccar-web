@@ -25,6 +25,13 @@ export default (keyword, filter, filterSort, filterMap, positions, setFilteredDe
         return [device.name, device.uniqueId, device.phone, device.model, device.contact].some((s) => s && s.toLowerCase().includes(lowerCaseKeyword));
       });
     switch (filterSort) {
+      case 'contact':
+        filtered.sort((device1, device2) => {
+            const contact1 = device1.contact || 'ZZZ'; // Utilise 'ZZZ' si contact est null ou undefined
+            const contact2 = device2.contact || 'ZZZ'; // Utilise 'ZZZ' si contact est null ou undefined
+            return contact1.localeCompare(contact2);
+        });
+        break;
       case 'name':
         filtered.sort((device1, device2) => device1.name.localeCompare(device2.name));
         break;

@@ -156,6 +156,7 @@ const MainToolbar = ({
               displayEmpty
             >
               <MenuItem value="">{'\u00a0'}</MenuItem>
+              <MenuItem value="contact">Contact</MenuItem>
               <MenuItem value="name">{t('sharedName')}</MenuItem>
               <MenuItem value="lastUpdate">{t('deviceLastUpdate')}</MenuItem>
             </Select>
