@@ -258,7 +258,8 @@ const changerInterventionStatus = useCatch(async () => {
               ) : (
                 <div className={classes.header}>
                   <Typography variant="body2" color="textSecondary">
-                    {device.name}
+                  {device.contact ? `${device.contact}` : ''} <br />
+                  {device.name}
                   </Typography>
                   <IconButton
                     size="small"
