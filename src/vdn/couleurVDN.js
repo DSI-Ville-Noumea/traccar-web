@@ -59,6 +59,33 @@ export const renderColorVDN = (category) => {
     if  (category === "motorcycle_SAN_Intervention") {return "#800000"}
     if  (category === "motorcycle_SIE") {return "#f3802b"}
     if  (category === "motorcycle_SIE_Intervention") {return "#f3802b"}
+    if  (category === "car_Intervention") {return "#eeeeee"}
+    if  (category === "car_ALI") {return "#edda05"}
+    if  (category === "car_ALI_Intervention") {return "#edda05"}
+    if  (category === "car_ALP") {return "#0fb813"}
+    if  (category === "car_ALP_Intervention") {return "#0fb813"}
+    if  (category === "car_BRA") {return "#000000"}
+    if  (category === "car_BRA_Intervention") {return "#000000"}
+    if  (category === "car_CHA") {return "#000000"}
+    if  (category === "car_CHA_Intervention") {return "#000000"}
+    if  (category === "car_DAU") {return "#2addd2"}
+    if  (category === "car_DAU_Intervention") {return "#2addd2"}
+    if  (category === "car_DEL") {return "#888888"}
+    if  (category === "car_DEL_Intervention") {return "#888888"}
+    if  (category === "car_GAI") {return "#9beda1"}
+    if  (category === "car_GAI_Intervention") {return "#9beda1"}
+    if  (category === "car_IND") {return "#ff0000"}
+    if  (category === "car_IND_Intervention") {return "#ff0000"}
+    if  (category === "car_QUE") {return "#89c6fa"}
+    if  (category === "car_QUE_Intervention") {return "#89c6fa"}
+    if  (category === "car_REC") {return "#CC00CC"}
+    if  (category === "car_REC_Intervention") {return "#CC00CC"}
+    if  (category === "car_ROM") {return "#0c0cc4"}
+    if  (category === "car_ROM_Intervention") {return "#0c0cc4"}
+    if  (category === "car_SAN") {return "#800000"}
+    if  (category === "car_SAN_Intervention") {return "#800000"}
+    if  (category === "car_SIE") {return "#f3802b"}
+    if  (category === "car_SIE_Intervention") {return "#f3802b"}
     return false;
   };
 
@@ -116,6 +143,33 @@ export const renderColorVDN = (category) => {
   import motorcycle_SAN_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
   import motorcycle_SIESvg from '../resources/images/icon/motorcycle.svg';
   import motorcycle_SIE_InterventionSvg from './images/icon/motorcycle_Intervention.svg';
+  import car_InterventionSvg from './images/icon/car_Intervention.svg';
+  import car_ALISvg from '../resources/images/icon/car.svg';
+  import car_ALI_InterventionSvg from './images/icon/car_Intervention.svg';
+  import car_ALPSvg from '../resources/images/icon/car.svg';
+  import car_ALP_InterventionSvg from './images/icon/car_Intervention.svg';
+  import car_BRASvg from '../resources/images/icon/car.svg';
+  import car_BRA_InterventionSvg from './images/icon/car_Intervention.svg';
+  import car_CHASvg from '../resources/images/icon/car.svg';
+  import car_CHA_InterventionSvg from './images/icon/car_Intervention.svg';
+  import car_DAUSvg from '../resources/images/icon/car.svg';
+  import car_DAU_InterventionSvg from './images/icon/car_Intervention.svg';
+  import car_DELSvg from '../resources/images/icon/car.svg';
+  import car_DEL_InterventionSvg from './images/icon/car_Intervention.svg';
+  import car_GAISvg from '../resources/images/icon/car.svg';
+  import car_GAI_InterventionSvg from './images/icon/car_Intervention.svg';
+  import car_INDSvg from '../resources/images/icon/car.svg';
+  import car_IND_InterventionSvg from './images/icon/car_Intervention.svg';
+  import car_QUESvg from '../resources/images/icon/car.svg';
+  import car_QUE_InterventionSvg from './images/icon/car_Intervention.svg';
+  import car_RECSvg from '../resources/images/icon/car.svg';
+  import car_REC_InterventionSvg from './images/icon/car_Intervention.svg';
+  import car_ROMSvg from '../resources/images/icon/car.svg';
+  import car_ROM_InterventionSvg from './images/icon/car_Intervention.svg';
+  import car_SANSvg from '../resources/images/icon/car.svg';
+  import car_SAN_InterventionSvg from './images/icon/car_Intervention.svg';
+  import car_SIESvg from '../resources/images/icon/car.svg';
+  import car_SIE_InterventionSvg from './images/icon/car_Intervention.svg';
   
 
   export const mapIconsVDN= {
@@ -172,7 +226,34 @@ export const renderColorVDN = (category) => {
     motorcycle_SAN: motorcycle_SANSvg,
     motorcycle_SAN_Intervention: motorcycle_SAN_InterventionSvg,
     motorcycle_SIE: motorcycle_SIESvg,
-    motorcycle_SIE_Intervention: motorcycle_SIE_InterventionSvg,    
+    motorcycle_SIE_Intervention: motorcycle_SIE_InterventionSvg,
+    car_Intervention: car_InterventionSvg,
+    car_ALI: car_ALISvg,
+    car_ALI_Intervention: car_ALI_InterventionSvg,
+    car_ALP: car_ALPSvg,
+    car_ALP_Intervention: car_ALP_InterventionSvg,
+    car_BRA: car_BRASvg,
+    car_BRA_Intervention: car_BRA_InterventionSvg,
+    car_CHA: car_CHASvg,
+    car_CHA_Intervention: car_CHA_InterventionSvg,
+    car_DAU: car_DAUSvg,
+    car_DAU_Intervention: car_DAU_InterventionSvg,
+    car_DEL: car_DELSvg,
+    car_DEL_Intervention: car_DEL_InterventionSvg,
+    car_GAI: car_GAISvg,
+    car_GAI_Intervention: car_GAI_InterventionSvg,
+    car_IND: car_INDSvg,
+    car_IND_Intervention: car_IND_InterventionSvg,
+    car_QUE: car_QUESvg,
+    car_QUE_Intervention: car_QUE_InterventionSvg,
+    car_REC: car_RECSvg,
+    car_REC_Intervention: car_REC_InterventionSvg,
+    car_ROM: car_ROMSvg,
+    car_ROM_Intervention: car_ROM_InterventionSvg,
+    car_SAN: car_SANSvg,
+    car_SAN_Intervention: car_SAN_InterventionSvg,
+    car_SIE: car_SIESvg,
+    car_SIE_Intervention: car_SIE_InterventionSvg,     
   };
 
   export const deviceCategoriesVDN = [
@@ -230,6 +311,33 @@ export const renderColorVDN = (category) => {
     'motorcycle_SAN_Intervention',
     'motorcycle_SIE',
     'motorcycle_SIE_Intervention',
+    'car_Intervention',
+    'car_ALI',
+    'car_ALI_Intervention',
+    'car_ALP',
+    'car_ALP_Intervention',
+    'car_BRA',
+    'car_BRA_Intervention',
+    'car_CHA',
+    'car_CHA_Intervention',
+    'car_DAU',
+    'car_DAU_Intervention',
+    'car_DEL',
+    'car_DEL_Intervention',
+    'car_GAI',
+    'car_GAI_Intervention',
+    'car_IND',
+    'car_IND_Intervention',
+    'car_QUE',
+    'car_QUE_Intervention',
+    'car_REC',
+    'car_REC_Intervention',
+    'car_ROM',
+    'car_ROM_Intervention',
+    'car_SAN',
+    'car_SAN_Intervention',
+    'car_SIE',
+    'car_SIE_Intervention',
     
   ];
   //fin luc
