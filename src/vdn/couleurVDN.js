@@ -1,5 +1,17 @@
 //deb luc
 
+export const getGroupDPMId = async () => {
+  try {
+    const response = await fetch('/api/groups');
+    const groups = await response.json();
+    const dpmGroup = groups.find(group => group.name === 'DPM');
+    return dpmGroup ? dpmGroup.id : null;
+  } catch (error) {
+    console.error("Erreur lors de la récupération de l'ID du groupe DPM :", error);
+    return null;
+  }
+};
+
 export const serviceAPI="serviceAPI@gmail.com"
 export const serviceAPIpassword="9SV4Ty6rL94hUF48mZv628hJwjmgMq8T"
 

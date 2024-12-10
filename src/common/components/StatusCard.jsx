@@ -39,6 +39,8 @@ import { useAttributePreference } from '../util/preferences';
 
 //deb luc authentification service SOS
 import { serviceAPI, serviceAPIpassword } from '../../vdn/couleurVDN';
+import { getGroupDPMId } from '../../vdn/couleurVDN';
+import { useEffect } from 'react';
 //fin luc
 
 
@@ -182,6 +184,24 @@ const StatusCard = ({ deviceId, position, onClose, disableActions, desktopPaddin
 
 //luc debut intervention
 
+const [isDPM, setIsDPM] = useState(false); // Déclarez l'état `isDPM`
+
+useEffect(() => {
+  const fetchGroupId = async () => {
+    const groupDPMId = await getGroupDPMId(); // Supposons que cette fonction récupère l'ID du groupe DPM
+    if (device.groupId === groupDPMId) {
+      setIsDPM(true); // Si le device appartient au groupe DPM, mettez `isDPM` à `true`
+    } else {
+      setIsDPM(false); // Sinon, mettez `isDPM` à `false`
+    }
+  };
+
+  fetchGroupId(); // Appel de la fonction pour récupérer et comparer l'ID du groupe
+}, [device]); // Cette fonction sera ré-exécutée chaque fois que `device` change
+
+//console.log(device); // Affiche l'objet complet du device
+
+
 const changerInterventionStatus = useCatch(async () => {
    
   //if (1===1)  throw Error(device.contact);
@@ -324,11 +344,13 @@ const changerInterventionStatus = useCatch(async () => {
                 >
                   <DeleteIcon />
                 </IconButton>
-                <IconButton
-                  onClick={() => changerInterventionStatus() }
-                >
-                  <InterventionIcon />
-                </IconButton>
+                {isDPM && (
+                  <IconButton
+                    onClick={() => changerInterventionStatus()}
+                  >
+                    <InterventionIcon />
+                  </IconButton>
+                )}
               </CardActions>
             </Card>
           </Draggable>
