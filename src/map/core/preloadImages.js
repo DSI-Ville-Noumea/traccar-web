@@ -1,5 +1,3 @@
-import { grey } from '@mui/material/colors';
-import createPalette from '@mui/material/styles/createPalette';
 import { loadImage, prepareIcon } from './mapUtil';
 
 import directionSvg from '../../resources/images/direction.svg';
@@ -65,10 +63,6 @@ export const mapIconKey = (category) => {
 };
 
 export const mapImages = {};
-
-const mapPalette = createPalette({
-  neutral: { main: grey[500] },
-});
 
 export default async () => {
   const background = await loadImage(backgroundSvg);

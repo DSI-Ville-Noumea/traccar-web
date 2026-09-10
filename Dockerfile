@@ -11,5 +11,5 @@ RUN npm ci && npm run build
 # le résultat du build se trouve généralement dans /app/build
 
 # Stage 2 : image finale basée sur l'image officielle
-FROM traccar/traccar:6.5.0
+FROM traccar/traccar:6.11.1
 COPY --from=web-build /app/build /opt/traccar/web

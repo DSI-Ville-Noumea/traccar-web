@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { usePreference } from '../../common/util/preferences';
 import { map } from '../core/MapView';
 
-const MapDefaultCamera = () => {
+const MapDefaultCamera = ({ mapReady }) => {
   const selectedDeviceId = useSelector((state) => state.devices.selectedId);
   const positions = useSelector((state) => state.session.positions);
 
@@ -15,9 +15,17 @@ const MapDefaultCamera = () => {
   const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
+    if (!mapReady || initialized) return;
     if (selectedDeviceId) {
-      setInitialized(true);
-    } else if (!initialized) {
+      const position = positions[selectedDeviceId];
+      if (position) {
+        map.jumpTo({
+          center: [position.longitude, position.latitude],
+          zoom: Math.max(defaultZoom > 0 ? defaultZoom : map.getZoom(), 10),
+        });
+        setInitialized(true);
+      }
+    } else {
       if (defaultLatitude && defaultLongitude) {
         map.jumpTo({
           center: [defaultLongitude, defaultLatitude],
@@ -38,15 +46,17 @@ const MapDefaultCamera = () => {
           const [individual] = coordinates;
           map.jumpTo({
             center: individual,
-            zoom: Math.max(map.getZoom(), 10),
+            zoom: Math.max(defaultZoom > 0 ? defaultZoom : map.getZoom(), 10),
           });
           setInitialized(true);
         }
       }
     }
-  }, [selectedDeviceId, initialized, defaultLatitude, defaultLongitude, defaultZoom, positions]);
+  }, [selectedDeviceId, initialized, defaultLatitude, defaultLongitude, defaultZoom, positions, mapReady]);
 
   return null;
 };
+
+MapDefaultCamera.handlesMapReady = true;
 
 export default MapDefaultCamera;

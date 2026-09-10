@@ -1,6 +1,10 @@
 import { useMemo } from 'react';
 
 export default (t) => useMemo(() => ({
+  language: {
+    name: t('loginLanguage'),
+    type: 'string',
+  },
   mapGeofences: {
     name: t('attributeShowGeofences'),
     type: 'boolean',
@@ -123,6 +127,14 @@ export default (t) => useMemo(() => ({
   },
   'web.liveRouteLength': {
     name: t('attributeWebLiveRouteLength'),
+    type: 'number',
+  },
+  mapLineWidth: {
+    name: t('attributeMapLineWidth'),
+    type: 'number',
+  },
+  mapLineOpacity: {
+    name: t('attributeMapLineOpacity'),
     type: 'number',
   },
   'web.selectZoom': {
